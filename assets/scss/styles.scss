@@ -1,0 +1,301 @@
+// Colors
+// Primary
+$moderate-violet: #7541c8;
+$very-dark-grayish-blue: #48556a;
+$very-dark-blackish-blue: #19212e;
+$white: #ffffff;
+// Neutral
+$light-gray: #cfcfcf;
+$light-grayish-blue: #ecf2f8;
+
+/*
+ * GLOBAL VARIABLES
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// BODY ELEMENTS
+body {
+    background-color: $light-grayish-blue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .testimonials-grid-section {
+        padding: 71px 24px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+.testimonials-grid-section {
+    .card {
+        padding: 26px 32px 32px;
+        border-radius: 8px;
+        max-width: 540px;
+        box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        position: relative;
+
+        &.daniel {
+            background-color: $moderate-violet;
+
+            & > * {
+                z-index: 1;
+            }
+
+            .quote-bg {
+                position: absolute;
+                top: 0px;
+                right: 24px;
+            }
+
+            .author {
+                .name-status {
+                    .name {
+                        color: $white;
+                    }
+
+                    .status {
+                        color: $white;
+                    }
+                }
+            }
+
+            .title {
+                color: $white;
+            }
+
+            .subtitle {
+                color: $light-gray;
+            }
+        }
+
+        &.jonathan {
+            background-color: $very-dark-grayish-blue;
+
+            .author {
+                .name-status {
+                    .name {
+                        color: $white;
+                    }
+
+                    .status {
+                        color: $white;
+                    }
+                }
+            }
+
+            .title {
+                color: $white;
+            }
+
+            .subtitle {
+                color: $white;
+            }
+        }
+
+        &.jeanette {
+            background-color: $white;
+
+            .author {
+                .name-status {
+                    .name {
+                        color: $very-dark-grayish-blue;
+                    }
+
+                    .status {
+                        color: $very-dark-grayish-blue;
+                    }
+                }
+            }
+
+            .title {
+                color: $very-dark-grayish-blue;
+            }
+
+            .subtitle {
+                color: $very-dark-grayish-blue;
+            }
+        }
+
+        &.patrick {
+            background-color: $very-dark-blackish-blue;
+
+            .author {
+                .name-status {
+                    .name {
+                        color: $white;
+                    }
+
+                    .status {
+                        color: $white;
+                    }
+                }
+            }
+
+            .title {
+                color: $light-grayish-blue;
+            }
+
+            .subtitle {
+                color: $white;
+            }
+        }
+
+        &.kira {
+            background-color: $white;
+
+            .author {
+                .name-status {
+                    .name {
+                        color: $very-dark-grayish-blue;
+                    }
+
+                    .status {
+                        color: $very-dark-grayish-blue;
+                    }
+                }
+            }
+
+            .title {
+                color: $very-dark-grayish-blue;
+            }
+
+            .subtitle {
+                color: $very-dark-grayish-blue;
+            }
+        }
+
+        .author {
+            display: flex;
+            gap: 17px;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .name-status {
+                .name {
+                    font-family: 'Barlow Semi Condensed';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 13px;
+                }
+
+                .status {
+                    margin-top: 4px;
+
+                    font-family: 'Barlow Semi Condensed';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 11px;
+                    line-height: 11px;
+
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+
+            }
+        }
+
+        .title {
+            font-family: 'Barlow Semi Condensed';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .subtitle {
+            font-family: 'Barlow Semi Condensed';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+
+            mix-blend-mode: normal;
+            opacity: 0.7;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    main {
+        .testimonials-grid-section {
+            padding: 71px 0;
+        }
+    }
+    .testimonials-grid-section {
+        .card {
+            &.jonathan {
+                max-width: 327px;
+            }
+
+            &.jeanette {
+                max-width: 327px;
+            }
+
+            &.kira {
+                max-width: 891px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1110px) {
+    main {
+        height: 100vh;
+        justify-content: center;
+
+        .testimonials-grid-section {
+            display: grid;
+            grid-template-areas: 'daniel daniel jonathan kira'
+                                 'jeanette patrick patrick kira';
+            gap: 30px;
+        }
+    }
+
+    .testimonials-grid-section {
+        .card {
+            &.daniel {
+                grid-area: daniel;
+                max-width: 540px;
+            }
+
+            &.jonathan {
+                grid-area: jonathan;
+                max-width: 255px;
+            }
+
+            &.jeanette {
+                grid-area: jeanette;
+                max-width: 255px;
+            }
+
+            &.patrick {
+                grid-area: patrick;
+                max-width: 540px;
+            }
+
+            &.kira {
+                grid-area: kira;
+                max-width: 255px;
+            }
+        }
+    }
+}
