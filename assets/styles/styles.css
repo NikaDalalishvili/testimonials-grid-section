@@ -187,12 +187,18 @@ main .testimonials-grid-section {
     justify-content: center;
   }
   main .testimonials-grid-section {
+    padding: 0;
     display: grid;
     grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 24px;
   }
 
+  .testimonials-grid-section .card {
+    padding: 26px 32px;
+  }
   .testimonials-grid-section .card.daniel {
+    padding: 26px 32px 32px;
     grid-area: daniel;
     max-width: 540px;
   }
@@ -204,6 +210,7 @@ main .testimonials-grid-section {
     margin-top: 16px;
   }
   .testimonials-grid-section .card.jonathan {
+    padding: 26px 32px 32px;
     grid-area: jonathan;
     max-width: 255px;
   }
