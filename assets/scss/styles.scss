@@ -46,7 +46,6 @@ main {
 
         display: flex;
         flex-direction: column;
-        gap: 16px;
 
         position: relative;
 
@@ -64,6 +63,9 @@ main {
             }
 
             .author {
+                img {
+                    outline: 2px solid #A775F1;
+                }
                 .name-status {
                     .name {
                         color: $white;
@@ -80,6 +82,7 @@ main {
             }
 
             .subtitle {
+                margin-top: 40px;
                 color: $light-gray;
             }
         }
@@ -136,6 +139,10 @@ main {
             background-color: $very-dark-blackish-blue;
 
             .author {
+                img {
+                    outline: 2px solid $moderate-violet;
+                }
+
                 .name-status {
                     .name {
                         color: $white;
@@ -214,6 +221,8 @@ main {
         }
 
         .title {
+            margin-top: 18px;
+
             font-family: 'Barlow Semi Condensed';
             font-style: normal;
             font-weight: 600;
@@ -222,6 +231,8 @@ main {
         }
 
         .subtitle {
+            margin-top: 16px;
+
             font-family: 'Barlow Semi Condensed';
             font-style: normal;
             font-weight: 500;
@@ -275,11 +286,24 @@ main {
             &.daniel {
                 grid-area: daniel;
                 max-width: 540px;
+
+                .quote-bg {
+                    top: 0;
+                    right: 80px;
+                }
+
+                .subtitle {
+                    margin-top: 16px;
+                }
             }
 
             &.jonathan {
                 grid-area: jonathan;
                 max-width: 255px;
+
+                .subtitle {
+                    margin-top: 16px;
+                }
             }
 
             &.jeanette {
@@ -295,6 +319,10 @@ main {
             &.kira {
                 grid-area: kira;
                 max-width: 255px;
+            }
+
+            .subtitle {
+                margin-top: 24px;
             }
         }
     }

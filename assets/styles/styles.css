@@ -31,7 +31,6 @@ main .testimonials-grid-section {
   box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
   display: flex;
   flex-direction: column;
-  gap: 16px;
   position: relative;
 }
 .testimonials-grid-section .card.daniel {
@@ -45,6 +44,9 @@ main .testimonials-grid-section {
   top: 0px;
   right: 24px;
 }
+.testimonials-grid-section .card.daniel .author img {
+  outline: 2px solid #A775F1;
+}
 .testimonials-grid-section .card.daniel .author .name-status .name {
   color: #ffffff;
 }
@@ -55,6 +57,7 @@ main .testimonials-grid-section {
   color: #ffffff;
 }
 .testimonials-grid-section .card.daniel .subtitle {
+  margin-top: 40px;
   color: #cfcfcf;
 }
 .testimonials-grid-section .card.jonathan {
@@ -89,6 +92,9 @@ main .testimonials-grid-section {
 }
 .testimonials-grid-section .card.patrick {
   background-color: #19212e;
+}
+.testimonials-grid-section .card.patrick .author img {
+  outline: 2px solid #7541c8;
 }
 .testimonials-grid-section .card.patrick .author .name-status .name {
   color: #ffffff;
@@ -142,6 +148,7 @@ main .testimonials-grid-section {
   opacity: 0.5;
 }
 .testimonials-grid-section .card .title {
+  margin-top: 18px;
   font-family: "Barlow Semi Condensed";
   font-style: normal;
   font-weight: 600;
@@ -149,6 +156,7 @@ main .testimonials-grid-section {
   line-height: 24px;
 }
 .testimonials-grid-section .card .subtitle {
+  margin-top: 16px;
   font-family: "Barlow Semi Condensed";
   font-style: normal;
   font-weight: 500;
@@ -188,9 +196,19 @@ main .testimonials-grid-section {
     grid-area: daniel;
     max-width: 540px;
   }
+  .testimonials-grid-section .card.daniel .quote-bg {
+    top: 0;
+    right: 80px;
+  }
+  .testimonials-grid-section .card.daniel .subtitle {
+    margin-top: 16px;
+  }
   .testimonials-grid-section .card.jonathan {
     grid-area: jonathan;
     max-width: 255px;
+  }
+  .testimonials-grid-section .card.jonathan .subtitle {
+    margin-top: 16px;
   }
   .testimonials-grid-section .card.jeanette {
     grid-area: jeanette;
@@ -203,5 +221,8 @@ main .testimonials-grid-section {
   .testimonials-grid-section .card.kira {
     grid-area: kira;
     max-width: 255px;
+  }
+  .testimonials-grid-section .card .subtitle {
+    margin-top: 24px;
   }
 }
